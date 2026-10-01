@@ -1,0 +1,177 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAAFF+h6SjaM2Hec=",
+  "name": "Beac-incident",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAAFF+h6SjaM2Hec=.Model",
+      "name": "Model",
+      "ownedElements": [
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "AAAAAAFF+h6SjaM2Hec=.UseCaseDiagram",
+          "name": "Diagramme de cas d'utilisation",
+          "ownedViews": [
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.ActorUtilisateur",
+              "model": {
+                "_type": "UMLActor",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.ActorUtilisateurModel",
+                "name": "Utilisateur"
+              },
+              "left": 50,
+              "top": 100,
+              "width": 80,
+              "height": 100
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.ActorTechnicien",
+              "model": {
+                "_type": "UMLActor",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.ActorTechnicienModel",
+                "name": "Technicien"
+              },
+              "left": 50,
+              "top": 300,
+              "width": 80,
+              "height": 100
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.ActorResponsable",
+              "model": {
+                "_type": "UMLActor",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.ActorResponsableModel",
+                "name": "Responsable"
+              },
+              "left": 700,
+              "top": 100,
+              "width": 80,
+              "height": 100
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.ActorAdmin",
+              "model": {
+                "_type": "UMLActor",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.ActorAdminModel",
+                "name": "Administrateur"
+              },
+              "left": 700,
+              "top": 300,
+              "width": 80,
+              "height": 100
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC1",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC1Model",
+                "name": "S'authentifier"
+              },
+              "left": 300,
+              "top": 50,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC2",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC2Model",
+                "name": "Déclarer un incident"
+              },
+              "left": 300,
+              "top": 130,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC3",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC3Model",
+                "name": "Suivre ses incidents"
+              },
+              "left": 300,
+              "top": 210,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC4",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC4Model",
+                "name": "Confirmer la résolution"
+              },
+              "left": 300,
+              "top": 290,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC5",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC5Model",
+                "name": "Traiter un incident"
+              },
+              "left": 300,
+              "top": 370,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC6",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC6Model",
+                "name": "Affecter un incident"
+              },
+              "left": 500,
+              "top": 130,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC7",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC7Model",
+                "name": "Voir les statistiques"
+              },
+              "left": 500,
+              "top": 210,
+              "width": 150,
+              "height": 50
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAAFF+h6SjaM2Hec=.UC8",
+              "model": {
+                "_type": "UMLUseCase",
+                "_id": "AAAAAAFF+h6SjaM2Hec=.UC8Model",
+                "name": "Gérer les utilisateurs"
+              },
+              "left": 500,
+              "top": 370,
+              "width": 150,
+              "height": 50
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

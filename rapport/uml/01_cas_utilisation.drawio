@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Cas d&#39;utilisation" id="cas1">
+    <mxGraphModel dx="1290" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="DIAGRAMME DE CAS D&#39;UTILISATION" vertex="1">
+          <mxGeometry height="30" width="600" x="250" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;verticalAlign=top;fontSize=14;fontStyle=1;spacingTop=10;" value="Beac-incident" vertex="1">
+          <mxGeometry height="520" width="600" x="250" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" value="Agent&#xa;(Utilisateur)" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" value="Technicien" vertex="1">
+          <mxGeometry height="60" width="30" x="50" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Responsable" vertex="1">
+          <mxGeometry height="60" width="30" x="1020" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" value="Administrateur" vertex="1">
+          <mxGeometry height="60" width="30" x="1020" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Se connecter" vertex="1">
+          <mxGeometry height="50" width="150" x="470" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Déclarer un problème" vertex="1">
+          <mxGeometry height="50" width="150" x="470" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Suivre ses problèmes" vertex="1">
+          <mxGeometry height="50" width="150" x="380" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Dire si c&#39;est réglé" vertex="1">
+          <mxGeometry height="50" width="150" x="370" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Réparer un problème" vertex="1">
+          <mxGeometry height="50" width="150" x="380" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Donner un problème&#xa;à un technicien" vertex="1">
+          <mxGeometry height="50" width="150" x="650" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Voir les chiffres" vertex="1">
+          <mxGeometry height="50" width="150" x="650" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="uc8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Gérer l&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;es comptes&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="150" x="650" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="uc9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=1;" value="Tri automatique&#xa;par l&#39;IA" vertex="1">
+          <mxGeometry height="50" width="150" x="470" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="a1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="a1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="a1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="a1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="a2" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="a2" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="a3" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="a3" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r9" edge="1" parent="1" source="a3" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r10" edge="1" parent="1" source="a4" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r11" edge="1" parent="1" source="a4" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r12" edge="1" parent="1" source="uc2" style="endArrow=open;html=1;rounded=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;fontStyle=2;" target="uc9" value="toujours">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legende" parent="1" style="text;html=1;strokeColor=#999999;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;spacing=5;" value="EXPLICATION SIMPLE :&#xa;&#xa;• L&#39;AGENT (utilisateur) : déclare ses problèmes, suit leur avancement, dit si c&#39;est réglé&#xa;• LE TECHNICIEN : répare les problèmes qu&#39;on lui donne&#xa;• LE RESPONSABLE : donne les problèmes aux techniciens et regarde les chiffres&#xa;• L&#39;ADMINISTRATEUR : crée les comptes des employés&#xa;&#xa;• POINT IMPORTANT : Quand l&#39;agent déclare un problème, l&#39;IA le trie AUTOMATIQUEMENT&#xa;  dans une catégorie (Réseau, Application, Sécurité, Email ou Téléphonie)" vertex="1">
+          <mxGeometry height="130" width="1060" x="50" y="640" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

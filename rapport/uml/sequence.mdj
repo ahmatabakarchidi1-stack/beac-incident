@@ -1,0 +1,86 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAAFF+h6SjaM2Hec3=",
+  "name": "Beac-incident",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAAFF+h6SjaM2Hec3=.Model",
+      "name": "Model",
+      "ownedElements": [
+        {
+          "_type": "UMLSequenceDiagram",
+          "_id": "AAAAAAFF+h6SjaM2Hec3=.SeqDiagram",
+          "name": "Diagramme de séquence - Déclaration d'incident",
+          "ownedViews": [
+            {
+              "_type": "UMLLifelineView",
+              "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline1",
+              "model": {
+                "_type": "UMLLifeline",
+                "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline1Model",
+                "name": "Ali (Utilisateur)"
+              },
+              "left": 50,
+              "top": 50,
+              "width": 120,
+              "height": 400
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline2",
+              "model": {
+                "_type": "UMLLifeline",
+                "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline2Model",
+                "name": "Application Mobile"
+              },
+              "left": 250,
+              "top": 50,
+              "width": 120,
+              "height": 400
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline3",
+              "model": {
+                "_type": "UMLLifeline",
+                "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline3Model",
+                "name": "API Django"
+              },
+              "left": 450,
+              "top": 50,
+              "width": 120,
+              "height": 400
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline4",
+              "model": {
+                "_type": "UMLLifeline",
+                "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline4Model",
+                "name": "Module IA"
+              },
+              "left": 650,
+              "top": 50,
+              "width": 120,
+              "height": 400
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline5",
+              "model": {
+                "_type": "UMLLifeline",
+                "_id": "AAAAAAFF+h6SjaM2Hec3=.Lifeline5Model",
+                "name": "PostgreSQL"
+              },
+              "left": 850,
+              "top": 50,
+              "width": 120,
+              "height": 400
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAAFF+h6SjaM2Hec4=",
+  "name": "Beac-incident",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAAFF+h6SjaM2Hec4=.Model",
+      "name": "Model",
+      "ownedElements": [
+        {
+          "_type": "UMLActivityDiagram",
+          "_id": "AAAAAAFF+h6SjaM2Hec4=.ActDiagram",
+          "name": "Diagramme d'activité - Cycle de vie d'un incident",
+          "ownedViews": [
+            {
+              "_type": "UMLInitialNodeView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Initial",
+              "model": {
+                "_type": "UMLInitialNode",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.InitialModel",
+                "name": "Début"
+              },
+              "left": 300,
+              "top": 30,
+              "width": 30,
+              "height": 30
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action1",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action1Model",
+                "name": "Ali déclare un incident"
+              },
+              "left": 250,
+              "top": 100,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action2",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action2Model",
+                "name": "Classification IA automatique"
+              },
+              "left": 250,
+              "top": 190,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action3",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action3Model",
+                "name": "Notification au Responsable"
+              },
+              "left": 250,
+              "top": 280,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action4",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action4Model",
+                "name": "Responsable affecte à Moussa"
+              },
+              "left": 250,
+              "top": 370,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action5",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action5Model",
+                "name": "Moussa traite l'incident"
+              },
+              "left": 250,
+              "top": 460,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action6",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action6Model",
+                "name": "Moussa marque résolu"
+              },
+              "left": 250,
+              "top": 550,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action7",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action7Model",
+                "name": "Ali confirme la résolution"
+              },
+              "left": 250,
+              "top": 640,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Action8",
+              "model": {
+                "_type": "UMLAction",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.Action8Model",
+                "name": "Incident fermé"
+              },
+              "left": 250,
+              "top": 730,
+              "width": 140,
+              "height": 50
+            },
+            {
+              "_type": "UMLFlowFinalNodeView",
+              "_id": "AAAAAAFF+h6SjaM2Hec4=.Final",
+              "model": {
+                "_type": "UMLFlowFinalNode",
+                "_id": "AAAAAAFF+h6SjaM2Hec4=.FinalModel",
+                "name": "Fin"
+              },
+              "left": 300,
+              "top": 820,
+              "width": 30,
+              "height": 30
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

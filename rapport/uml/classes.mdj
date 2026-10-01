@@ -1,0 +1,103 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAAFF+h6SjaM2Hec2=",
+  "name": "Beac-incident",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAAFF+h6SjaM2Hec2=.Model",
+      "name": "Model",
+      "ownedElements": [
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "AAAAAAFF+h6SjaM2Hec2=.ClassDiagram",
+          "name": "Diagramme de classes",
+          "ownedViews": [
+            {
+              "_type": "UMLClassView",
+              "_id": "AAAAAAFF+h6SjaM2Hec2=.Utilisateur",
+              "model": {
+                "_type": "UMLClass",
+                "_id": "AAAAAAFF+h6SjaM2Hec2=.UtilisateurModel",
+                "name": "Utilisateur",
+                "attributes": [
+                  { "_type": "UMLAttribute", "_id": "u1", "name": "id : int" },
+                  { "_type": "UMLAttribute", "_id": "u2", "name": "username : string" },
+                  { "_type": "UMLAttribute", "_id": "u3", "name": "email : string" },
+                  { "_type": "UMLAttribute", "_id": "u4", "name": "password : string" },
+                  { "_type": "UMLAttribute", "_id": "u5", "name": "role : string" },
+                  { "_type": "UMLAttribute", "_id": "u6", "name": "telephone : string" },
+                  { "_type": "UMLAttribute", "_id": "u7", "name": "service : string" }
+                ],
+                "operations": [
+                  { "_type": "UMLOperation", "_id": "uo1", "name": "seConnecter()" },
+                  { "_type": "UMLOperation", "_id": "uo2", "name": "seDeconnecter()" }
+                ]
+              },
+              "left": 50,
+              "top": 50,
+              "width": 250,
+              "height": 180
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "AAAAAAFF+h6SjaM2Hec2=.Incident",
+              "model": {
+                "_type": "UMLClass",
+                "_id": "AAAAAAFF+h6SjaM2Hec2=.IncidentModel",
+                "name": "Incident",
+                "attributes": [
+                  { "_type": "UMLAttribute", "_id": "i1", "name": "id : int" },
+                  { "_type": "UMLAttribute", "_id": "i2", "name": "titre : string" },
+                  { "_type": "UMLAttribute", "_id": "i3", "name": "description : text" },
+                  { "_type": "UMLAttribute", "_id": "i4", "name": "categorie : string" },
+                  { "_type": "UMLAttribute", "_id": "i5", "name": "priorite : string" },
+                  { "_type": "UMLAttribute", "_id": "i6", "name": "statut : string" },
+                  { "_type": "UMLAttribute", "_id": "i7", "name": "date_creation : datetime" },
+                  { "_type": "UMLAttribute", "_id": "i8", "name": "date_resolution : datetime" },
+                  { "_type": "UMLAttribute", "_id": "i9", "name": "classification_ia : bool" },
+                  { "_type": "UMLAttribute", "_id": "i10", "name": "resolution_commentaire : text" },
+                  { "_type": "UMLAttribute", "_id": "i11", "name": "commentaire_interne : text" },
+                  { "_type": "UMLAttribute", "_id": "i12", "name": "confirme_par_utilisateur : bool" }
+                ],
+                "operations": [
+                  { "_type": "UMLOperation", "_id": "io1", "name": "classifierAuto()" },
+                  { "_type": "UMLOperation", "_id": "io2", "name": "assigner(technicien)" },
+                  { "_type": "UMLOperation", "_id": "io3", "name": "resoudre()" },
+                  { "_type": "UMLOperation", "_id": "io4", "name": "confirmer()" },
+                  { "_type": "UMLOperation", "_id": "io5", "name": "reouvrir()" }
+                ]
+              },
+              "left": 400,
+              "top": 50,
+              "width": 280,
+              "height": 260
+            },
+            {
+              "_type": "UMLClassView",
+              "_id": "AAAAAAFF+h6SjaM2Hec2=.Notification",
+              "model": {
+                "_type": "UMLClass",
+                "_id": "AAAAAAFF+h6SjaM2Hec2=.NotificationModel",
+                "name": "Notification",
+                "attributes": [
+                  { "_type": "UMLAttribute", "_id": "n1", "name": "id : int" },
+                  { "_type": "UMLAttribute", "_id": "n2", "name": "message : text" },
+                  { "_type": "UMLAttribute", "_id": "n3", "name": "est_lu : bool" },
+                  { "_type": "UMLAttribute", "_id": "n4", "name": "date_creation : datetime" }
+                ],
+                "operations": [
+                  { "_type": "UMLOperation", "_id": "no1", "name": "marquerCommeLu()" }
+                ]
+              },
+              "left": 50,
+              "top": 350,
+              "width": 250,
+              "height": 130
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

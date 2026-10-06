@@ -21,7 +21,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'djoser',
-    'channels',   
+    'channels',  
+    'fcm_django', 
     'incidents',
     'users',
     'notifications',
@@ -168,4 +169,30 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels.layers.InMemoryChannelLayer',
     },
+}
+
+# ============================================
+# CONFIGURATION FIREBASE CLOUD MESSAGING (FCM)
+# ============================================
+import firebase_admin
+from firebase_admin import credentials
+
+# Chemin vers le fichier de credentials Firebase
+FIREBASE_CREDENTIALS_PATH = os.path.join(BASE_DIR, 'firebase-credentials.json')
+
+# Initialiser Firebase Admin SDK
+if not firebase_admin._apps:
+    try:
+        cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
+        firebase_admin.initialize_app(cred)
+        print("✅ Firebase initialisé avec succès")
+    except Exception as e:
+        print(f"❌ Erreur initialisation Firebase : {str(e)}")
+
+# Configuration fcm-django
+FCM_DJANGO_SETTINGS = {
+    "DEFAULT_FIREBASE_APP": None,
+    "ONE_DEVICE_PER_USER": False,
+    "DELETE_INACTIVE_DEVICES": False,
+    "UPDATE_ON_DUPLICATE_REG_ID": True,
 }

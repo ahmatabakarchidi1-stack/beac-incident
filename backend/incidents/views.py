@@ -8,6 +8,19 @@ from .models import Incident
 from .serializers import IncidentSerializer
 from .ml.classifier import IncidentClassifier
 from .services.supabase_storage import uploader_photo, supprimer_photo
+from .notifications_ws import (
+    notifier_nouvel_incident,
+    notifier_incident_assigne,
+    notifier_incident_resolu,
+    notifier_incident_ferme,
+    notifier_incident_reouvert,
+)
+from .services.fcm_service import (
+    notifier_tous_les_admins,
+    notifier_tous_les_responsables,
+    notifier_technicien,
+    envoyer_notification_push,
+)
 
 classifier = IncidentClassifier()
 
@@ -48,13 +61,35 @@ class IncidentViewSet(viewsets.ModelViewSet):
             except Exception as e:
                 print(f"❌ Erreur upload photo : {str(e)}")
         
-        serializer.save(
+        incident = serializer.save(
             createur=user,
             categorie=categorie,
             classification_ia=True,
             photo=photo_url,
             photo_nom=photo_nom
         )
+        
+        # ============================================================
+        # NOTIFICATIONS : WebSocket + Push (FCM)
+        # ============================================================
+        
+        # 1. Notification WebSocket (temps réel dans l'app web)
+        notifier_nouvel_incident(incident)
+        
+        # 2. Notification Push (FCM) aux admins et responsables
+        try:
+            notifier_tous_les_admins(
+                "🔔 Nouvel incident",
+                f"#{incident.id} - {incident.titre}",
+                {"incident_id": str(incident.id), "type": "nouvel_incident"}
+            )
+            notifier_tous_les_responsables(
+                "🔔 Nouvel incident",
+                f"#{incident.id} - {incident.titre}",
+                {"incident_id": str(incident.id), "type": "nouvel_incident"}
+            )
+        except Exception as e:
+            print(f"❌ Erreur notification FCM : {str(e)}")
 
     # ============================================================
     # FILTRAGE : chaque rôle voit ce qui le concerne
@@ -90,6 +125,19 @@ class IncidentViewSet(viewsets.ModelViewSet):
             incident.technicien_assigne = technicien
             incident.statut = 'en_cours'
             incident.save()
+            
+            # Notifications
+            notifier_incident_assigne(incident)
+            try:
+                notifier_technicien(
+                    technicien,
+                    "🔧 Incident assigné",
+                    f"#{incident.id} - {incident.titre}",
+                    {"incident_id": str(incident.id), "type": "incident_assigne"}
+                )
+            except Exception as e:
+                print(f"❌ Erreur notification FCM : {str(e)}")
+            
             return Response({'status': 'Incident assigné avec succès'})
         except User.DoesNotExist:
             return Response(
@@ -115,6 +163,19 @@ class IncidentViewSet(viewsets.ModelViewSet):
         incident.resolution_commentaire = request.data.get('resolution_commentaire', '')
         incident.commentaire_interne = request.data.get('commentaire_interne', '')
         incident.save()
+        
+        # Notifications
+        notifier_incident_resolu(incident)
+        try:
+            envoyer_notification_push(
+                incident.createur,
+                "✅ Incident résolu",
+                f"#{incident.id} - Merci de confirmer la résolution",
+                {"incident_id": str(incident.id), "type": "incident_resolu"}
+            )
+        except Exception as e:
+            print(f"❌ Erreur notification FCM : {str(e)}")
+        
         return Response({'status': 'Incident marqué comme résolu'})
 
     # ============================================================
@@ -132,6 +193,10 @@ class IncidentViewSet(viewsets.ModelViewSet):
         incident.statut = 'ferme'
         incident.date_confirmation = timezone.now()
         incident.save()
+        
+        # Notifications
+        notifier_incident_ferme(incident)
+        
         return Response({'status': 'Résolution confirmée'})
 
     # ============================================================
@@ -150,6 +215,20 @@ class IncidentViewSet(viewsets.ModelViewSet):
         raison = request.data.get('raison', '')
         incident.commentaire_interne += f"\n\n[REOUVERT par {user.username}] {raison}"
         incident.save()
+        
+        # Notifications
+        notifier_incident_reouvert(incident)
+        try:
+            if incident.technicien_assigne:
+                notifier_technicien(
+                    incident.technicien_assigne,
+                    "⚠️ Incident réouvert",
+                    f"#{incident.id} - Retour au technicien",
+                    {"incident_id": str(incident.id), "type": "incident_reouvert"}
+                )
+        except Exception as e:
+            print(f"❌ Erreur notification FCM : {str(e)}")
+        
         return Response({'status': 'Incident réouvert'})
 
     # ============================================================
